@@ -1,5 +1,7 @@
 /*----PRO1 - Dashboard----------------------------------*/
 
+--bonjour tout le monde
+
 /*----DEFAULT FILTERS----------------------------------*/
 	DECLARE @dateDebut			DATE
 	DECLARE @dateFin			DATE
