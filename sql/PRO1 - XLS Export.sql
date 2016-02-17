@@ -59,16 +59,16 @@ SELECT	top (1000000) /*rows limitation for excel 2007*/
 FROM FaitSousDossiers 
 	LEFT OUTER JOIN DimSousDossiersEtats		ON FaitSousDossiers.idDernierEtat = DimSousDossiersEtats.id
 	LEFT OUTER JOIN DimUtilisateur			ON FaitSousDossiers.idUtilisateurCreation = DimUtilisateur.idUtilisateur
-	LEFT OUTER JOIN DimSousDossiersTypes		ON FaitSousDossiers.idType = DimSousDossiersTypes.id
-	LEFT OUTER JOIN DimSousDossiersSousTypes	ON FaitSousDossiers.idSousType = DimSousDossiersSousTypes.id
-	LEFT OUTER JOIN DimSousDossiersSousSousTypes	ON FaitSousDossiers.idSousSousType = DimSousDossiersSousSousTypes.id
+	--LEFT OUTER JOIN DimSousDossiersTypes		ON FaitSousDossiers.idType = DimSousDossiersTypes.id
+	--LEFT OUTER JOIN DimSousDossiersSousTypes	ON FaitSousDossiers.idSousType = DimSousDossiersSousTypes.id
+	--LEFT OUTER JOIN DimSousDossiersSousSousTypes	ON FaitSousDossiers.idSousSousType = DimSousDossiersSousSousTypes.id
 	LEFT OUTER JOIN DimFournisseur			ON FaitSousDossiers.idFournisseur = DimFournisseur.idFournisseur
 	LEFT OUTER JOIN DimDossiers				ON FaitSousDossiers.idDossier = DimDossiers.id
 	LEFT OUTER JOIN DimVehicule				ON DimDossiers.idVehicule = DimVehicule.idVehicule
-	LEFT OUTER JOIN DimMarque				ON COALESCE(DimVehicule.idMarque, DimDossiers.horsParcIdMarque) = DimMarque.idMarque
+	--LEFT OUTER JOIN DimMarque				ON COALESCE(DimVehicule.idMarque, DimDossiers.horsParcIdMarque) = DimMarque.idMarque
 	LEFT OUTER JOIN DimModele				ON COALESCE(DimVehicule.idModele, DimDossiers.horsParcIdModele) = DimModele.idModele
 	LEFT OUTER JOIN DimTypeVehicule			ON COALESCE(DimVehicule.idTypeVehicule, DimDossiers.horsParcIdType) = DimTypeVehicule.idTypeVehicule
-	LEFT OUTER JOIN DimTypeEnergie			ON COALESCE(DimVehicule.idTypeEnergie, DimDossiers.horsParcIdEnergie) = DimTypeEnergie.idTypeEnergie
+	--LEFT OUTER JOIN DimTypeEnergie			ON COALESCE(DimVehicule.idTypeEnergie, DimDossiers.horsParcIdEnergie) = DimTypeEnergie.idTypeEnergie
 	LEFT OUTER JOIN DimTypeTransmission		ON DimVehicule.idTypeTransmission = DimTypeTransmission.idTypeTransmission
 	LEFT OUTER JOIN DimPersonne				ON DimFournisseur.idPersonneMorale = DimPersonne.idPersonne
 	LEFT OUTER JOIN DimClientCMC				ON DimDossiers.idClient = DimClientCMC.id
