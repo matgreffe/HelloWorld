@@ -2,6 +2,8 @@
 
 /*----VENTILATION----------------------------------*/
 
+--ce code est magnifique
+
 	DECLARE @Type 				NVARCHAR(4000)/*get filter from interface*/
 	--SET @Type = 'marque'
 	--SET @Type = 'modele'
